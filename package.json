@@ -8,6 +8,7 @@
     ],
     "author": "JesseBrault0709",
     "license": "ISC",
+    "repository": "https://github.com/JesseBrault0709/cc-types",
     "files": [
         "index.d.ts"
     ],
