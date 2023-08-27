@@ -1,16 +1,18 @@
 {
     "name": "@jessebrault0709/cc-types",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "types for computercraft 1.75/minecraft 1.7.10",
     "keywords": [
         "typescript-to-lua",
+        "minecraft",
         "computercraft"
     ],
     "author": "JesseBrault0709",
     "license": "ISC",
     "repository": "https://github.com/JesseBrault0709/cc-types",
     "files": [
-        "index.d.ts"
+        "index.d.ts",
+        "apis/**/*.d.ts"
     ],
     "types": "index.d.ts",
     "devDependencies": {
