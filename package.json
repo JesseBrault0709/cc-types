@@ -1,6 +1,6 @@
 {
     "name": "@jessebrault0709/cc-types",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "types for computercraft 1.75/minecraft 1.7.10",
     "keywords": [
         "typescript-to-lua",
