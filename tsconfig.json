@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext"],
+        "types": ["lua-types/5.2"]
+    }
+}

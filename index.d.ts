@@ -1,0 +1,8 @@
+import './apis/colors'
+import './apis/fs'
+import './apis/os'
+import './apis/peripheral'
+import './apis/rednet'
+import './apis/redstone'
+import './apis/term'
+import './apis/textutils'
