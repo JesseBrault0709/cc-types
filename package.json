@@ -1,13 +1,13 @@
 {
     "name": "@jessebrault0709/cc-types",
-    "version": "0.1.2",
-    "description": "types for computercraft 1.75/minecraft 1.7.10",
+    "version": "0.2.0",
+    "description": "Type declarations for ComputerCraft 1.75/Minecraft 1.7.10.",
     "keywords": [
         "typescript-to-lua",
         "minecraft",
         "computercraft"
     ],
-    "author": "JesseBrault0709",
+    "author": "jessebrault0709",
     "license": "ISC",
     "repository": "https://github.com/JesseBrault0709/cc-types",
     "files": [
@@ -16,7 +16,6 @@
     ],
     "types": "index.d.ts",
     "devDependencies": {
-        "lua-types": "^2.13.1",
         "typescript-to-lua": "^1.18.0"
     }
 }

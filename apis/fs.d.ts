@@ -2,12 +2,15 @@
 
 declare type FileMode = 'r' | 'w' | 'a' | 'rb' | 'wb' | 'ab'
 
-declare type FileHandle<M extends FileMode> = 
-    M extends 'r' ? FileHandleR :
-        M extends 'w' | 'a' ? FileHandleWA : 
-            M extends 'rb' ? FileHandleRB :
-                M extends 'wb' | 'ab' ? FileHandleWAB : never
-
+declare type FileHandle<M extends FileMode> = M extends 'r'
+    ? FileHandleR
+    : M extends 'w' | 'a'
+    ? FileHandleWA
+    : M extends 'rb'
+    ? FileHandleRB
+    : M extends 'wb' | 'ab'
+    ? FileHandleWAB
+    : never
 
 /** @noSelf */
 declare interface BasicFileHandle {
@@ -41,10 +44,9 @@ declare interface FileHandleWAB extends BasicFileHandle {
  * @link https://computercraft.info/wiki/Fs_(API)
  */
 declare module fs {
-
-    /** 
-     * Returns a list of all the files (including subdirectories 
-     * but not their contents) contained in a directory, as a 
+    /**
+     * Returns a list of all the files (including subdirectories
+     * but not their contents) contained in a directory, as a
      * numerically indexed table.
      */
     export function list(path: string): string[]
@@ -70,7 +72,7 @@ declare module fs {
     export function getName(path: string): string
 
     /**
-     * Gets the storage medium holding a path, 
+     * Gets the storage medium holding a path,
      * or nil if the path does not exist.
      */
     export function getDrive(path: string): string | undefined
@@ -81,7 +83,7 @@ declare module fs {
     export function getSize(path: string): number
 
     /**
-     * Gets the remaining space on the drive containing 
+     * Gets the remaining space on the drive containing
      * the given directory.
      */
     export function getFreeSpace(path: string): number
@@ -101,8 +103,8 @@ declare module fs {
 
     /**
      * Combines two path components, returning a path
-     * consisting of the local path nested inside the base 
-     * path. 
+     * consisting of the local path nested inside the base
+     * path.
      */
     export function combine(basePath: string, localPath: string): string
 
@@ -112,7 +114,7 @@ declare module fs {
     export function open<M extends FileMode>(path: string, mode: M): FileHandle<M>
 
     /**
-     * Searches the computer's files using wildcards. 
+     * Searches the computer's files using wildcards.
      * Requires version 1.6 or later.
      */
     export function find(wildcard: string): string[]
@@ -124,10 +126,14 @@ declare module fs {
     export function getDir(path: string): string
 
     /**
-     * Returns a list of strings that could be combined with 
-     * the provided name to produce valid entries in the 
+     * Returns a list of strings that could be combined with
+     * the provided name to produce valid entries in the
      * specified folder. Requires version 1.74 or later.
      */
-    export function complete(partialName: string, path: string, includeFiles?: boolean, includeSlashes?: boolean): string[]
-
+    export function complete(
+        partialName: string,
+        path: string,
+        includeFiles?: boolean,
+        includeSlashes?: boolean
+    ): string[]
 }

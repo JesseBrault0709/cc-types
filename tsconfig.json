@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
         "lib": ["ESNext"],
-        "types": ["lua-types/5.2"]
+        "types": ["@typescript-to-lua/language-extensions"]
     }
 }

@@ -1,24 +1,22 @@
 /** @noSelfInFile */
 
 declare namespace colors {
-
     /**
-     * Combines one or more colors (or sets of colors) 
+     * Combines one or more colors (or sets of colors)
      * into a larger set.
      */
     export function combine(...colors: number[]): number
 
     /**
-     * Removes one or more colors (or sets of colors) 
+     * Removes one or more colors (or sets of colors)
      * from an initial set.
      */
     export function subtract(colorSet: number, ...colors: number[]): number
-    
+
     /**
      * Tests whether color is contained within colors.
      */
     export function test(colorSet: number, color: number): boolean
-
 }
 
 declare enum colors {
