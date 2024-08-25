@@ -1,6 +1,6 @@
 {
     "name": "@jessebrault0709/cc-types",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Type declarations for ComputerCraft 1.75/Minecraft 1.7.10.",
     "keywords": [
         "typescript-to-lua",

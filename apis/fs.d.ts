@@ -110,8 +110,9 @@ declare module fs {
 
     /**
      * Opens a file so it can be read or written.
+     * Returns undefined (nil) if there was an error.
      */
-    export function open<M extends FileMode>(path: string, mode: M): FileHandle<M>
+    export function open<M extends FileMode>(path: string, mode: M): FileHandle<M> | undefined
 
     /**
      * Searches the computer's files using wildcards.
